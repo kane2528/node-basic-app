@@ -1,0 +1,36 @@
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx_cont
+    ports:
+      - "80:80"
+    depends_on:
+      - node-app
+    networks:
+      - node-net
+
+  node-app:
+    build: ./app
+    container_name: node-app
+    depends_on:
+      - db
+    networks:
+      - node-net
+
+  db:
+    image: mysql:latest
+    container_name: db_cont
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - node-net
+
+volumes:
+  mysql-data:
+
+networks:
+  node-net:
+
