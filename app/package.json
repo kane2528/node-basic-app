@@ -1,0 +1,25 @@
+{
+  "name": "basic-app",
+  "version": "1.0.0",
+  "description": "for docker practice and projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kane2528/node-basic-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kane2528/node-basic-app/issues"
+  },
+  "homepage": "https://github.com/kane2528/node-basic-app#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
